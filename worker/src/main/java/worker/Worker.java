@@ -5,7 +5,7 @@ import redis.clients.jedis.exceptions.JedisConnectionException;
 import java.sql.*;
 import org.json.JSONObject;
 
-//prueba3.1 - Para Jenkins
+//prueba3.2 - Para Jenkins
 class Worker {
   public static void main(String[] args) {
     try {
