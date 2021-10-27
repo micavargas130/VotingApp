@@ -5,7 +5,7 @@ import redis.clients.jedis.exceptions.JedisConnectionException;
 import java.sql.*;
 import org.json.JSONObject;
 
-//prueba2
+//prueba2.0
 class Worker {
   public static void main(String[] args) {
     try {
