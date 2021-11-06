@@ -28,6 +28,13 @@ pipeline{
 				sh 'docker push 01032000/voting-app_worker:latest'
 			}
 		}
+		
+		stage('Up') {
+		
+		        steps {
+				sh 'docker-compose up -d  
+			}
+		
 	}
 
 	post {
