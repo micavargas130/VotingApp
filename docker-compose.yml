@@ -19,9 +19,9 @@ services:
       - back-tier
 
   result:
-    build: ./result
+    image: micavargas130/voting-app_worker:v1.0.4
     # use nodemon rather than node for local dev
-    command: nodemon server.js
+    command: docker push 
     depends_on:
       db:
         condition: service_healthy 
@@ -35,8 +35,7 @@ services:
       - back-tier
 
   worker:
-    build:
-      context: ./worker
+    01032000/voting-app_worker:v1.0
     depends_on:
       redis:
         condition: service_healthy 

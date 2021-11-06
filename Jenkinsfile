@@ -23,6 +23,16 @@ node {
    sh 'mvn clean compile'
    
    
+   
+   // ------------------------------------
+   // -- ETAPA: PUSH
+   // ------------------------------------
+   stage 'Push'
+   echo 'Sube la imagen docker a DockerHub'
+   docker.withRegistry('https://registry.hub.docker.com/', 'git') {
+   app.push("${env.BUILD_NUMBER}")            
+       app.push("latest")   }
+   
    // ------------------------------------
    // -- ETAPA: Instalar
    // ------------------------------------
